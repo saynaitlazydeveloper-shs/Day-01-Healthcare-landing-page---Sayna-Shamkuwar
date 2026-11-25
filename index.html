@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HealthConnect — Your Health, Our Priority</title>
+  <meta name="description" content="HealthConnect helps patients explore healthcare services, find verified doctors, browse featured hospitals, and get smart department suggestions.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- ====================================================================
+       Site Header & Primary Navigation (3 Pages Only)
+       ==================================================================== -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="index.html" class="brand" aria-label="HealthConnect Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </span>
+        <span>Health<span class="brand-accent">Connect</span></span>
+      </a>
+
+      <button type="button" id="menuToggle" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <ul id="navMenu" class="nav-links">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="pages/services.html">Healthcare Services</a></li>
+        <li><a href="pages/suggestions.html">Smart Suggestions</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="pages/suggestions.html" class="btn btn-primary btn-sm btn-book-nav">Get Healthcare Suggestions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================================================================
+         Hero Section — "Your Health, Our Priority"
+         ================================================================== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Trusted Patient Care Platform</span>
+          <h1 class="hero-title">
+            Your Health, <span>Our Priority</span>
+          </h1>
+          <p class="hero-lead">
+            Connect with experienced medical specialists, explore essential healthcare services, discover featured hospitals near you, and receive smart department guidance in seconds.
+          </p>
+          <div class="hero-cta">
+            <a href="pages/suggestions.html" class="btn btn-primary">Get Healthcare Suggestions</a>
+            <a href="pages/services.html" class="btn btn-navy">Explore Services</a>
+            <a href="#doctors" class="btn btn-outline">Find a Doctor</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <span class="stat-value">8 Specialties</span>
+              <span class="stat-label">Dedicated Medical Care</span>
+            </div>
+            <div>
+              <span class="stat-value">4 Hospitals</span>
+              <span class="stat-label">24/7 Emergency &amp; Clinics</span>
+            </div>
+            <div>
+              <span class="stat-value">Smart Match</span>
+              <span class="stat-label">Instant Department Guide</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Quick Patient Access">
+          <div class="hero-panel-header">
+            <div>
+              <h2 style="font-size:1.15rem; margin-bottom:0.15rem;">Quick Patient Access</h2>
+              <span style="font-size:0.86rem; color:var(--slate-500);">Start Your Care Journey</span>
+            </div>
+            <span class="pulse-dot" title="Care Services Available"></span>
+          </div>
+
+          <div class="quick-nav-list">
+            <a href="pages/suggestions.html" class="quick-nav-item">
+              <div>
+                Get Healthcare Suggestions
+                <span class="quick-nav-sub">Match your concern &amp; duration to a specialist</span>
+              </div>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="pages/services.html" class="quick-nav-item">
+              <div>
+                Browse Healthcare Services
+                <span class="quick-nav-sub">8 departments from General Care to Cardiology</span>
+              </div>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#doctors" class="quick-nav-item">
+              <div>
+                Find a Doctor
+                <span class="quick-nav-sub">Search specialists &amp; book demo slots</span>
+              </div>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a href="#hospitals" class="quick-nav-item">
+              <div>
+                Featured Hospitals
+                <span class="quick-nav-sub">Locations, hours &amp; emergency units</span>
+              </div>
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Section 1: Healthcare Services Preview
+         ================================================================== -->
+    <section id="services-preview" class="section section-tint">
+      <div class="container">
+        <div class="section-header-row reveal">
+          <div class="section-header">
+            <span class="eyebrow">Healthcare Services Preview</span>
+            <h2 class="section-title">Specialized Care for Every Need</h2>
+            <p class="section-subtitle">
+              Preview our most requested medical departments or view all 8 healthcare services to find the right specialist.
+            </p>
+          </div>
+          <a href="pages/services.html" class="btn btn-outline">View All 8 Services &rarr;</a>
+        </div>
+
+        <div id="servicesPreviewGrid" class="grid grid-4 reveal"></div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Section 2: Find a Doctor
+         ================================================================== -->
+    <section id="doctors" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Find a Doctor</span>
+          <h2 class="section-title">Verified Specialists Ready to Help</h2>
+          <p class="section-subtitle">
+            Search by doctor name, hospital, or medical department, and book an appointment slot directly.
+          </p>
+        </div>
+
+        <div id="doctorFilterBanner" class="active-filter-banner" role="status" aria-live="polite">
+          <span id="doctorFilterMessage"></span>
+          <button type="button" id="resetDoctorFilter" class="btn btn-soft btn-sm">Show All Doctors</button>
+        </div>
+
+        <div class="filter-bar reveal">
+          <div class="search-input-wrap">
+            <label for="doctorSearch" class="form-label" style="position:absolute; left:-9999px;">Search doctors</label>
+            <input type="search" id="doctorSearch" class="input" placeholder="Search by doctor name, specialty, or hospital...">
+          </div>
+          <div class="filter-select-wrap">
+            <label for="doctorSpecialtyFilter" class="form-label" style="position:absolute; left:-9999px;">Filter by specialty</label>
+            <select id="doctorSpecialtyFilter" class="select">
+              <option value="all">All Specialties</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="doctorsGrid" class="grid grid-3 reveal"></div>
+        <p id="doctorsEmpty" style="display:none; color:var(--slate-500); margin-top:1rem;">
+          No doctors matched your search criteria. Try clearing the search box or choosing "All Specialties".
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Section 3: Featured Hospitals
+         ================================================================== -->
+    <section id="hospitals" class="section section-soft">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Featured Hospitals</span>
+          <h2 class="section-title">Partner Hospitals &amp; Care Centers</h2>
+          <p class="section-subtitle">
+            Explore trusted medical centers offering 24/7 emergency care, diagnostics, and outpatient consultations.
+          </p>
+        </div>
+
+        <div id="hospitalsGrid" class="grid grid-2 reveal"></div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         Section 4: Get Healthcare Suggestions CTA
+         ================================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div>
+            <span class="eyebrow" style="background:rgba(255,255,255,0.16); color:#fff;">Smart Care Guidance</span>
+            <h2 class="section-title" style="margin-bottom:0.65rem;">Not Sure Which Doctor to Consult?</h2>
+            <p>
+              Select your health concern and symptom duration on our Smart Healthcare Suggestions tool to receive an instant department recommendation and matched specialist.
+            </p>
+          </div>
+          <div class="cta-banner-actions">
+            <a href="pages/suggestions.html" class="btn btn-white">Get Healthcare Suggestions &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       Interactive Appointment Booking Modal
+       ==================================================================== -->
+  <div id="bookingModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="bookingModalTitle">
+    <div class="modal-dialog">
+      <button type="button" id="closeBookingModal" class="modal-close" aria-label="Close booking dialog">&times;</button>
+      <span class="badge" style="margin-bottom:0.5rem;">Appointment Request</span>
+      <h2 id="bookingModalTitle" style="margin-bottom:0.35rem;">Book a Doctor Visit</h2>
+      <p style="font-size:0.92rem; color:var(--slate-600); margin-bottom:1.25rem;">
+        Schedule a simulated consultation. Demo bookings are saved locally in your browser.
+      </p>
+
+      <div id="bookingFeedback" class="form-feedback" role="status" aria-live="polite"></div>
+
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="patientName" class="form-label">Patient Full Name *</label>
+            <input type="text" id="patientName" class="input" placeholder="e.g., Jordan Taylor" required>
+          </div>
+
+          <div class="form-field">
+            <label for="patientEmail" class="form-label">Email Address *</label>
+            <input type="email" id="patientEmail" class="input" placeholder="jordan@example.com" required>
+          </div>
+
+          <div class="form-field full">
+            <label for="bookingDoctor" class="form-label">Selected Doctor *</label>
+            <select id="bookingDoctor" class="select" required></select>
+          </div>
+
+          <div class="form-field">
+            <label for="bookingDate" class="form-label">Preferred Date *</label>
+            <input type="date" id="bookingDate" class="input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="visitType" class="form-label">Visit Type *</label>
+            <select id="visitType" class="select">
+              <option value="In-Person Clinic">In-Person Clinic</option>
+              <option value="Telehealth Video">Telehealth Video</option>
+            </select>
+          </div>
+
+          <div class="form-field full">
+            <span class="form-label">Available Time Slots *</span>
+            <div id="timeSlotGrid" class="slot-grid"></div>
+            <input type="hidden" id="selectedSlot" name="selectedSlot">
+          </div>
+        </div>
+
+        <div style="margin-top:1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+          <span style="font-size:0.82rem; color:var(--slate-500);">Educational demo only — no real medical data is sent.</span>
+          <button type="submit" class="btn btn-primary">Confirm Booking</button>
+        </div>
+      </form>
+
+      <div style="margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--slate-200);">
+        <h3 style="font-size:1rem; margin-bottom:0.75rem;">Your Saved Demo Appointments</h3>
+        <div id="appointmentsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       Site Footer (3 Pages Navigation Only)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid footer-grid-3">
+        <div>
+          <h3>HealthConnect</h3>
+          <p style="font-size:0.93rem;">
+            Your Health, Our Priority. A clean, accessible healthcare services platform connecting patients with trusted specialists, hospitals, and smart care guidance.
+          </p>
+        </div>
+        <div>
+          <h4>Website Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/services.html">Healthcare Services</a></li>
+            <li><a href="pages/suggestions.html">Smart Healthcare Suggestions</a></li>
+            <li><a href="#doctors">Find a Doctor</a></li>
+            <li><a href="#hospitals">Featured Hospitals</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Core Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="index.html?specialty=General%20Physician#doctors">General Physician</a></li>
+            <li><a href="index.html?specialty=Cardiologist#doctors">Cardiologist</a></li>
+            <li><a href="index.html?specialty=Dermatologist#doctors">Dermatologist</a></li>
+            <li><a href="index.html?specialty=Gynaecologist#doctors">Gynaecologist</a></li>
+            <li><a href="pages/services.html">View All 8 Services &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 HealthConnect. All rights reserved.</span>
+        <span>Educational internship project. For medical emergencies, call your local emergency number.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
